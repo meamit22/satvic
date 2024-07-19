@@ -33,7 +33,6 @@
   width: 100%;
 }
 .left_header {
-  font-family: Nunito;
   font-size: 24px;
   font-weight: 600;
   line-height: 32.74px;
@@ -45,7 +44,7 @@
   gap: 10px;
   border-radius: 12px;
   opacity: 0px;
-  font-family: Nunito;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 22.5px;
@@ -68,7 +67,7 @@
   border-radius: 6px;
   opacity: 0px;
   background: #53c267;
-  font-family: Nunito;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 19.1px;
@@ -85,7 +84,6 @@
   margin: 4px 0 16px;
 }
 .rating_count {
-  font-family: Nunito;
   font-size: 14px;
   font-weight: 700;
   line-height: 19.1px;
@@ -93,7 +91,6 @@
   color: #818184;
 }
 .desc {
-  font-family: Nunito;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -125,7 +122,6 @@
   gap: 2px;
 }
 .top {
-  font-family: Nunito;
   font-size: 14px;
   font-weight: 500;
   line-height: 19.1px;
@@ -133,7 +129,6 @@
   color: #363636;
 }
 .bottom {
-  font-family: Nunito;
   font-size: 12px;
   font-weight: 500;
   line-height: 16.37px;
@@ -141,7 +136,6 @@
   color: #818184;
 }
 .price {
-  font-family: Nunito;
   font-size: 20px;
   font-weight: 700;
   line-height: 27.28px;
@@ -152,10 +146,49 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  font-family: Nunito;
+
   font-size: 16px;
   font-weight: 600;
   line-height: 21.82px;
   text-align: center;
   color: #337ab7;
+}
+.left_arrow {
+  z-index: 1;
+  position: absolute;
+  left: 10px;
+  top: 150px;
+  cursor: pointer;
+}
+.right_arrow {
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  top: 150px;
+  cursor: pointer;
+}
+.bulletsContainer {
+  text-align: center;
+  margin-top: 10px;
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 35%;
+}
+
+.bullet.active {
+  background-color: #fff;
+  opacity: 100%;
 }

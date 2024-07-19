@@ -31,3 +31,10 @@
 *:focus {
   outline: none !important;
 }
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+.nunito {
+  font-family: "Nunito", sans-serif;
+}

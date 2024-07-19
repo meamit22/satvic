@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./Workshop.module.css";
 import Image from "next/image";
 import WebButtons from "../webButtons/WebButtons";
@@ -14,16 +15,61 @@ function Workshop({
   startDate,
   days,
   price,
+  imgSrc,
 }: any) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "/assets/workshop/image1.png",
+    "/assets/workshop/image2.png",
+    "/assets/workshop/image3.png",
+    "/assets/workshop/image4.png",
+  ];
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
   return (
     <div className={styles.container}>
       <div className={styles.workshop_left}>
         <Image
           className={styles.image}
-          src={"/assets/workshop/image1.png"}
+          src={images[currentIndex]}
           alt="img1"
           fill={true}
         />
+        <Image
+          src={"/assets/workshop/left.svg"}
+          alt="left"
+          width={48}
+          height={48}
+          className={styles.left_arrow}
+          onClick={handlePrev}
+        />
+        <Image
+          src={"/assets/workshop/right.svg"}
+          alt="left"
+          width={48}
+          height={48}
+          className={styles.right_arrow}
+          onClick={handleNext}
+        />
+        <div className={styles.bulletsContainer}>
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.bullet} ${
+                index === currentIndex ? styles.active : ""
+              }`}
+            />
+          ))}
+        </div>
       </div>
       <div className={styles.workshop_right}>
         <div className={styles.header}>

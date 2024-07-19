@@ -6,32 +6,32 @@
 .join_button {
   width: 231px;
   height: 50px;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 30px 10px 30px;
   gap: 10px;
   border-radius: 12px;
   opacity: 0px;
   background-color: #337ab7;
   color: #fff;
   border: none !important;
-  font-family: Nunito;
   font-size: 18px;
   font-weight: 700;
   line-height: 24.55px;
-  text-align: right;
+  text-align: center;
+  cursor: pointer;
 }
 .details_button {
   width: 153px;
   height: 50px;
-  padding: 10px 24px 10px 24px;
+  padding: 10px 16px 10px 16px;
   gap: 10px;
   border-radius: 12px;
   border: 2px solid #337ab7;
   opacity: 0px;
   color: #337ab7;
-  font-family: Nunito;
   font-size: 18px;
   font-weight: 700;
   line-height: 24.55px;
-  text-align: right;
+  text-align: center;
   background-color: #fff;
+  cursor: pointer;
 }

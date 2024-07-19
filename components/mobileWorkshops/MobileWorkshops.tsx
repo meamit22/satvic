@@ -18,6 +18,7 @@ function MobileWorkshops() {
         days={"21"}
         language={"English"}
         price={990}
+        imgSrc={"/assets/workshop/image1.png"}
       />
       <MobileWorkshop
         title={"Heal Yourself Challenge"}
@@ -32,6 +33,7 @@ function MobileWorkshops() {
         days={"21"}
         language={"English"}
         price={990}
+        imgSrc={"/assets/workshop/image4.png"}
       />
       <MobileWorkshop
         title={"Yoga Challenge"}
@@ -44,6 +46,7 @@ function MobileWorkshops() {
         days={"21"}
         language={"Hindi,English"}
         price={990}
+        imgSrc={"/assets/workshop/image3.png"}
       />
       <MobileWorkshop
         title={"7-Day Satvic Food Challenge"}
@@ -56,6 +59,7 @@ function MobileWorkshops() {
         days={"21"}
         language={"Hindi"}
         price={990}
+        imgSrc={"/assets/workshop/image2.png"}
       />
     </div>
   );

@@ -2,9 +2,17 @@
 import React, { useState } from "react";
 import styles from "./JoinForm.module.css";
 import Image from "next/image";
+import TextField from "@mui/material/TextField";
 
-function JoinForm() {
-  const [formType, setFormType] = useState("mobil");
+function JoinForm({ setOpenDialog }: any) {
+  const [formType, setFormType] = useState("mobile");
+  const handleButton = () => {
+    if (formType === "mobile") {
+      setFormType("payment");
+    } else {
+      setOpenDialog(false);
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.top_info}>
@@ -20,6 +28,10 @@ function JoinForm() {
             alt="cross"
             width={12}
             height={12}
+            onClick={() => {
+              setOpenDialog(false);
+            }}
+            className={styles.cross_icon}
           />
         </div>
         <div className={styles.plan}>
@@ -100,6 +112,62 @@ function JoinForm() {
         </div>
       ) : (
         <div className={styles.bottom_desc}>
+          <div className={styles.inputs}>
+            <TextField
+              className={styles.input}
+              id="standard-basic"
+              label="Name"
+              variant="filled"
+              InputProps={{
+                disableUnderline: true,
+                style: {
+                  backgroundColor: "#fff",
+                  borderRadius: "12px",
+                },
+              }}
+              sx={{
+                backgroundColor: "#fff",
+                borderRadius: "12px",
+                boxShadow: "0px 4px 20px 0px #2b2b2b14",
+              }}
+            />
+            <TextField
+              className={styles.input}
+              id="standard-basic"
+              label="Email ID"
+              variant="filled"
+              InputProps={{
+                disableUnderline: true,
+                style: {
+                  backgroundColor: "#fff",
+                  borderRadius: "12px",
+                },
+              }}
+              sx={{
+                backgroundColor: "#fff",
+                borderRadius: "12px",
+                boxShadow: "0px 4px 20px 0px #2b2b2b14",
+              }}
+            />
+            <TextField
+              className={styles.input}
+              id="standard-basic"
+              label="Enter Your City"
+              variant="filled"
+              InputProps={{
+                disableUnderline: true,
+                style: {
+                  backgroundColor: "#fff",
+                  borderRadius: "12px",
+                },
+              }}
+              sx={{
+                backgroundColor: "#fff",
+                borderRadius: "12px",
+                boxShadow: "0px 4px 20px 0px #2b2b2b14",
+              }}
+            />
+          </div>
           <div className={styles.help}>
             <div className={styles.help_title}>
               This workshop can help you heal the following:
@@ -129,7 +197,7 @@ function JoinForm() {
         </div>
       )}
       <div className={styles.bottom_button}>
-        <button className={styles.continue}>
+        <button onClick={handleButton} className={styles.continue}>
           {formType === "mobile" ? "Continue" : "Continue to payment"}
         </button>
       </div>
