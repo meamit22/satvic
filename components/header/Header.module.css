@@ -9,6 +9,8 @@
   left: 0;
   top: 0;
   max-width: 100%;
+  z-index: 99;
+  background-color: #fff;
 }
 .header_left {
   display: flex;
@@ -71,7 +73,7 @@
     gap: 12px;
   }
 }
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1600px) {
   .title {
     font-size: 11px;
     line-height: 15px;

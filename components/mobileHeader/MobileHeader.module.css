@@ -8,6 +8,8 @@
   top: 0;
   width: 100%;
   max-width: 100%;
+  z-index: 99;
+  background-color: #fff;
 }
 .logo {
   position: relative;

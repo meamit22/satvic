@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 12px;
+  opacity: 0px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px #2b2b2b14;
+}
+.workshop_left {
+  position: relative;
+  height: 183px;
+  width: 100%;
+}
+.image {
+  border-radius: 12px 12px 0 0;
+}
+.workshop_right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 16px;
+}
+.left_header {
+  font-family: Nunito;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 0;
+}
+.rating_count {
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  color: #818184;
+}
+.rating_tag {
+  width: 42px;
+  height: 20px;
+  padding: 2px 4px 2px 4px;
+  gap: 4px;
+  border-radius: 6px;
+  opacity: 0px;
+  background: #53c267;
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  padding: 6px 12px;
+  height: 40px;
+  align-items: center;
+  box-shadow: 0px 4px 20px 0px #2b2b2b14;
+  margin: 16px 0;
+}
+.info_tag {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.top {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.1px;
+  text-align: left;
+}
+.desc {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #818184;
+}
+.buttons_container {
+  display: flex;
+  height: 72px;
+  padding: 16px;
+  box-shadow: 0px -4px 20px 0px #2b2b2b0f;
+  align-items: center;
+  justify-content: space-between;
+}
+.details {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.1px;
+  text-align: right;
+  color: #337ab7;
+}
+.join {
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  gap: 6px;
+  border-radius: 12px;
+  opacity: 0px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

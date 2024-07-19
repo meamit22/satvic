@@ -1,0 +1,38 @@
+.lower_body {
+  margin-top: 102px;
+  position: relative;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 517px;
+}
+.workshops_container {
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+}
+.workshop {
+  width: 62%;
+}
+@media screen and (max-width: 1700px) {
+  .workshop {
+    width: 72%;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .workshop {
+    width: 78%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 158px;
+  }
+  .lower_body {
+    margin-top: 48px;
+  }
+}
