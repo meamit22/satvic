@@ -208,6 +208,9 @@
   flex-direction: column;
   gap: 24px;
 }
+.disabled {
+  background-color: #818184;
+}
 @media screen and (max-width: 768px) {
   .container {
     padding-bottom: 0;

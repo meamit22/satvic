@@ -6,12 +6,29 @@ import TextField from "@mui/material/TextField";
 
 function JoinForm({ setOpenDialog }: any) {
   const [formType, setFormType] = useState("mobile");
+  const [mobile, setMobile] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    city: "",
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const isFormValid = () => {
+    return formData.name && formData.email && formData.city;
+  };
   const handleButton = () => {
-    if (formType === "mobile") {
-      setFormType("payment");
-    } else {
-      setOpenDialog(false);
-    }
+    setOpenDialog(false);
+  };
+  const handleContinueButton = () => {
+    setFormType("payment");
   };
   return (
     <div className={styles.container}>
@@ -98,6 +115,10 @@ function JoinForm({ setOpenDialog }: any) {
               type="tel"
               placeholder="Enter your mobile number"
               className={styles.phoneInput}
+              value={mobile}
+              onChange={(e) => {
+                setMobile(e.target.value);
+              }}
             />
           </div>
           <div className={styles.warning}>
@@ -117,6 +138,9 @@ function JoinForm({ setOpenDialog }: any) {
               className={styles.input}
               id="standard-basic"
               label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               variant="filled"
               InputProps={{
                 disableUnderline: true,
@@ -136,6 +160,9 @@ function JoinForm({ setOpenDialog }: any) {
               id="standard-basic"
               label="Email ID"
               variant="filled"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               InputProps={{
                 disableUnderline: true,
                 style: {
@@ -154,6 +181,9 @@ function JoinForm({ setOpenDialog }: any) {
               id="standard-basic"
               label="Enter Your City"
               variant="filled"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
               InputProps={{
                 disableUnderline: true,
                 style: {
@@ -197,9 +227,27 @@ function JoinForm({ setOpenDialog }: any) {
         </div>
       )}
       <div className={styles.bottom_button}>
-        <button onClick={handleButton} className={styles.continue}>
-          {formType === "mobile" ? "Continue" : "Continue to payment"}
-        </button>
+        {formType === "mobile" ? (
+          <button
+            disabled={mobile.length !== 10}
+            onClick={handleContinueButton}
+            className={`${styles.continue} ${
+              mobile.length !== 10 ? styles.disabled : ""
+            }`}
+          >
+            Continue
+          </button>
+        ) : (
+          <button
+            disabled={!isFormValid()}
+            onClick={handleButton}
+            className={`${styles.continue} ${
+              !isFormValid() ? styles.disabled : ""
+            }`}
+          >
+            Continue to payment
+          </button>
+        )}
       </div>
     </div>
   );
